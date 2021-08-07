@@ -6,10 +6,14 @@
     align-items: center;
     padding: 1rem;
     margin-right: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: rgb(231, 231, 231);
+    font-size: 0.7rem;
 }
 .icon svg{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-right: 0.5rem;
 }
 .badge {
@@ -43,3 +47,16 @@
     }
   }
   
+
+@media (min-width: 500px) {
+  .button {
+    font-size: 1rem;
+}
+.icon svg{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+}
+

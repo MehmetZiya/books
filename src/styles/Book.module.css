@@ -1,14 +1,23 @@
 .bookCard {
-    width: 12rem;
+    width: 6rem;
     text-align: center;
     border: 1px solid black;
-    margin: 1rem;
+    margin: 0.5rem;
     cursor: pointer;
+    font-size: 0.7rem;
+    
+}
+.buttom{
+    margin-bottom: 0.5rem;
+}
+
+.head {
+    min-height: 4rem;
 }
 
 .bookCover {
     width: auto;
-    max-height: 250px;
+    max-height: 120px;
     border: 1px solid rgb(158, 158, 158);
     box-shadow: 6px 6px 4px 1px rgba(77, 76, 76, 0.788);
 }
@@ -16,3 +25,21 @@
 .addBasket {
     margin: 1rem 0;
 }
+
+
+@media (min-width: 500px) {
+    .bookCard {
+        width: 12rem;
+        margin: 1rem;
+        font-size: 1rem;
+    } 
+    .head {
+        min-height: 5rem;
+    }
+    
+    .bookCover {
+        max-height: 250px;
+    }
+
+}
+

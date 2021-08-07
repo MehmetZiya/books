@@ -26,13 +26,13 @@ const  CartButton = (props) => {
     
     return ( 
         <div>
-            <button className ={btnClasses} onClick={props.onShow}>
+            <div className ={btnClasses} onClick={props.onShow}>
                 <span className ={styles.icon}>
                     <CartIcon />
                 </span>
                 <span>Your Basket :</span>
                 <span className ={styles.badge}> {totalBookQty}</span>
-            </button> 
+            </div> 
         </div>
         
     );

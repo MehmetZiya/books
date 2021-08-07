@@ -6,12 +6,15 @@ const Cart = (props) => {
 
     return (
         <div className ={styles.cartBox}>
+            <h2 className={styles.shopList}>Your Cart List</h2>
             <span onClick ={props.closeCart} className ={styles.close}> x </span>
             {cartItems.length === 0 && <div className = {styles.cartItems}>Cart is empty!</div> }
             {cartItems && cartItems.map(( book) => (
                 <div key={book.id} className = {styles.cartItems}>
-                    <div className={styles.cartImg}><img src={book.img} alt={book.name} /></div>
-                    <div className = {styles.name}> <p><b>{book.name}</b></p> <p>{book.author}</p></div>
+                    <div className={styles.cartHead}>
+                        <div className={styles.cartImg}><img src={book.img} alt={book.name} /></div>
+                        <div className = {styles.name}> <p><b>{book.name}</b></p> <p>{book.author}</p></div>
+                    </div> 
                     <div className={styles.cartInfo}>
                         <div > <span className = {styles.qty}> x {book.qty}</span></div>
                         <div>
@@ -22,7 +25,6 @@ const Cart = (props) => {
                             <b>{(book.price * book.qty).toFixed(2)} ₺</b>
                         </div>
                     </div>
-                    
                 </div>
             ))}
             <div className = {styles.cartItems}>

@@ -22,11 +22,17 @@ const Book = (props) => {
 
   return (
     <div className ={styles.bookCard} onClick= {showBookDesc}>
-      <h3>{props.book.name}</h3>
-      <p>{props.book.author}</p>
-      <img src={props.book.img} alt={props.book.name} className={styles.bookCover}/>
-      <p>{props.book.price.toFixed(2)} ₺</p>
-      <button onClick={addToCart} className={styles.addBasket} >Add +</button>
+      <div>
+        <div className={styles.head}>
+          <h3>{props.book.name}</h3>
+          <p>{props.book.author}</p>
+        </div>
+        <img src={props.book.img} alt={props.book.name} className={styles.bookCover}/>
+      </div>
+      <div className={styles.buttom}>
+        <p>{props.book.price.toFixed(2)} ₺</p>
+        <button onClick={addToCart} className={styles.addBasket} >Add +</button>
+      </div>
     </div>
   );
 };
