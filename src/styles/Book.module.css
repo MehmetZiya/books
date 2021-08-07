@@ -1,4 +1,18 @@
+.bookCard {
+    width: 12rem;
+    text-align: center;
+    border: 1px solid black;
+    margin: 1rem;
+    cursor: pointer;
+}
+
 .bookCover {
-    width: 100%;
+    width: auto;
     max-height: 250px;
+    border: 1px solid rgb(158, 158, 158);
+    box-shadow: 6px 6px 4px 1px rgba(77, 76, 76, 0.788);
+}
+
+.addBasket {
+    margin: 1rem 0;
 }

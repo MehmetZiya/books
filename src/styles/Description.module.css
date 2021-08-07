@@ -1,0 +1,20 @@
+.descUp {
+    display: flex;
+}
+
+.descImg {
+    border: 1px solid rgb(128, 128, 128);
+    margin: 1rem;
+    width: 20vw;
+    min-width: 200px;
+    height: auto;
+    box-shadow: 6px 6px 4px 1px rgba(77, 76, 76, 0.788);
+}
+.descImg img {
+    width: 100%;
+    height: auto;
+}
+.prg{
+    width: 70%;
+    padding: 1rem;
+}
