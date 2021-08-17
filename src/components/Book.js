@@ -1,10 +1,13 @@
 import React ,{ useContext } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+
+
 import styles from "../styles/Book.module.css" ;
 
 const Book = (props) => {
   const {addBookToCart} = useContext(CartContext);
+  
   const history = useHistory();
 
   const showBookDesc = (e) => {

@@ -1,20 +1,23 @@
 
-import { useState, useEffect, useContext } from 'react' ;
+import { useState, useContext, useEffect } from 'react' ;
 import { useParams, withRouter} from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import { BookContext } from '../context/BookContext';
 import styles from '../styles/Description.module.css' ;
 
 const Description = (props) => {
     const { addBookToCart } = useContext(CartContext);
+    const { books} = useContext(BookContext);
     const { bookId } = useParams();
-    const [ book, setBook ]= useState(props.books[0]);
+    const [ book , setBook]= useState(books[bookId]);
 
+    
     useEffect(()=>{
-        const selectedBook = props.books.find((book) => book.id === +bookId) ;
-        setBook(selectedBook);
+        const selectedBook = books.find((book) => book.id === bookId);
+        setBook(selectedBook)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [bookId]);
-
+    }, [bookId]); 
+    
     const addToCart = (e) => {
         e.preventDefault();
         addBookToCart(book);

@@ -1,13 +1,14 @@
 
-import React from "react" ;
+import { useContext } from "react" ;
 import Book from "./Book";
 import styles from "../styles/BookList.module.css" ;
+import { BookContext } from '../context/BookContext';
 
-
-const BookList = (props) => {
+const BookList = () => {
+    const {books} = useContext(BookContext);
     return ( 
         <div className={styles.card}>
-            {props.books.map( (book) => (
+            {books.map( (book) => (
                 <Book book={book} key={book.id}/>
             ))}
         </div>
